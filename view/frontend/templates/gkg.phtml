@@ -1,0 +1,39 @@
+<?php
+/**
+ * Copyright © 2016 Vadym Kalin.
+ * http://full-stack-dev.com
+ * kalinvadim@gmail.com
+ * All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<?php /** @var $block \Magento\GoogleKnowledgeGraph\Block\Ga */ ?>
+<?php if (!$this->helper('Magento\Cookie\Helper\Cookie')->isUserNotAllowSaveCookie()): ?>
+<!-- BEGIN GOOGLE KNOWLEDGE GRAPH CODE -->
+<script type="application/ld+json">
+{
+    "@context" : "http://schema.org",
+    "@type" : "Organization",
+    "url" : "<?php /* @escapeNotVerified */ ?>",
+    "logo" : "<?php /* @escapeNotVerified */ ?>",
+    "sameAs" : [
+        <?php /* @escapeNotVerified */ ?>],
+    "contactPoint" : [{
+       "@type" : "ContactPoint",
+       "telephone" : "<?php /* @escapeNotVerified */ ?>",
+       "contactType" : "<?php /* @escapeNotVerified */ ?>",
+       "contactOption" : "<?php /* @escapeNotVerified */ ?>",
+       "areaServed" : [
+            "US"
+       ],
+       "availableLanguage" : [
+            "<?php /* @escapeNotVerified */ ?>",
+       ]
+    }]
+}
+</script>
+<!-- END GOOGLE KNOWLEDGE GRAPH CODE -->
+<?php endif; ?>
